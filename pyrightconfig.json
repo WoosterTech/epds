@@ -1,0 +1,10 @@
+{
+    "include": [
+        "epds",
+        "tests"
+    ],
+    "verboseOutput": true,
+    "venvPath": ".",
+    "venv": ".venv",
+    "pythonVersion": "3.14"
+}

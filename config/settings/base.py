@@ -4,7 +4,10 @@
 import os
 from pathlib import Path
 
+import django_stubs_ext
 import environ
+
+django_stubs_ext.monkeypatch()
 
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 # epds/
@@ -96,7 +99,7 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "epds.users",
-    # Your stuff: custom apps go here
+    "epds.posters",
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS

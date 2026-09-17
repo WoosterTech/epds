@@ -25,6 +25,7 @@ dependencies = [
   "django-model-utils==5.0.0",
   "django-ninja==1.7.0",
   "django-redis==7.0.0",
+  "django-stubs-ext>=6.1.1",
   "gunicorn==26.2.0",
   "hiredis==3.4.1",
   "pillow==12.3.0",
@@ -131,6 +132,7 @@ lint.select = [
   "YTT",
 ]
 lint.ignore = [
+  "COM812",
   "E501",   # the formatter will handle line length, so we can ignore this rule
   "RUF012", # Mutable class attributes should be annotated with `typing.ClassVar`
   "S101",   # Use of assert detected https://docs.astral.sh/ruff/rules/assert/
@@ -139,7 +141,6 @@ lint.ignore = [
   # Deactivated because it can make the code slow:
   # https://github.com/astral-sh/ruff/issues/7871
 ]
-lint.isort.force-single-line = true
 
 # ==== pyproject-fmt ====
 [tool.pyproject-fmt]
